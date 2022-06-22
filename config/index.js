@@ -1,5 +1,5 @@
 const config = {
-  projectName: 'myApp',
+  projectName: 'taro-unocss',
   date: '2022-5-15',
   designWidth: 750,
   deviceRatio: {
@@ -9,7 +9,10 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: ['taro-plugin-pinia'],
+  plugins: [
+    'taro-plugin-pinia',
+    'taro-plugin-unocss'
+  ],
   defineConstants: {
   },
   copy: {

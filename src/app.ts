@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
+import 'uno.css'
 import './app.less'
 const App = createApp({
   onShow() {
