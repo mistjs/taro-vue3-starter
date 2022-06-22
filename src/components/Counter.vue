@@ -11,12 +11,6 @@ const counter = useCounterStore()
 
 const onAdd = () => {
   counter.count++
-
-  // with autocompletion ✨
-  // counter.$patch({count: counter.count + 1})
-
-  // or using an action instead
-  // counter.increment()
 }
 </script>
 

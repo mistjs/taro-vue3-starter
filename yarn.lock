@@ -1905,7 +1905,7 @@
     "@unocss/core" "0.39.3"
     unconfig "^0.3.4"
 
-"@unocss/core@0.39.3":
+"@unocss/core@0.39.3", "@unocss/core@^0.39.3":
   version "0.39.3"
   resolved "https://registry.npmmirror.com/@unocss/core/-/core-0.39.3.tgz#fec1e71b2f89e14629c47be72f6c894dd88933ac"
   integrity sha512-8MnXKHNtp6xgsFIaFtWctnbsT60c8JSlxXA7XbGxEztOmSEhpZmLeLGe5AgmEGPH6MssqJtI0DCeTbzbbtOjfw==
@@ -1918,7 +1918,7 @@
     gzip-size "^6.0.0"
     sirv "^2.0.2"
 
-"@unocss/preset-attributify@0.39.3":
+"@unocss/preset-attributify@0.39.3", "@unocss/preset-attributify@^0.39.3":
   version "0.39.3"
   resolved "https://registry.yarnpkg.com/@unocss/preset-attributify/-/preset-attributify-0.39.3.tgz#b2bf4f645edd7f9890e85fcdfd770e19298d611d"
   integrity sha512-SZWWUfTTKyHHqlF9x6aZ+BFMIiwOsUTP4NXS3/rIroqzfvVDZtGS6/a7RVBl+M74wjqSWB/DDeS9kQiH2L/CIg==
@@ -1941,13 +1941,6 @@
   dependencies:
     "@unocss/core" "0.39.3"
 
-"@unocss/preset-rem-to-px@^0.39.3":
-  version "0.39.3"
-  resolved "https://registry.npmmirror.com/@unocss/preset-rem-to-px/-/preset-rem-to-px-0.39.3.tgz#068486659d1b7049ca98b0d3d60cacd875d4b6c7"
-  integrity sha512-ptjrwXPt5/oTFgSzG27HvHZ/fhGVXBcekGO0npLiBiY1c/7+2cR5t6w/SswIdcFAAjxz0HGXy34S5EmsMm93ow==
-  dependencies:
-    "@unocss/core" "0.39.3"
-
 "@unocss/preset-tagify@0.39.3":
   version "0.39.3"
   resolved "https://registry.yarnpkg.com/@unocss/preset-tagify/-/preset-tagify-0.39.3.tgz#a0268c8aae0e0c5825079a87312c93ac8b05a43c"
@@ -1955,14 +1948,14 @@
   dependencies:
     "@unocss/core" "0.39.3"
 
-"@unocss/preset-typography@0.39.3":
+"@unocss/preset-typography@0.39.3", "@unocss/preset-typography@^0.39.3":
   version "0.39.3"
   resolved "https://registry.yarnpkg.com/@unocss/preset-typography/-/preset-typography-0.39.3.tgz#fd151885aa9d83a9ea9577aa26737f9f96dcf661"
   integrity sha512-jTJOA87bEkU0RGMPSFZK3Zobr2fgkqKCYDczTjPbCiZ8UzlMJnWrpsNTN9f4UI0b6Ck8sXtMtW8sRrJsEll9jg==
   dependencies:
     "@unocss/core" "0.39.3"
 
-"@unocss/preset-uno@0.39.3":
+"@unocss/preset-uno@0.39.3", "@unocss/preset-uno@^0.39.3":
   version "0.39.3"
   resolved "https://registry.yarnpkg.com/@unocss/preset-uno/-/preset-uno-0.39.3.tgz#bf8d05ee9e92006a788d56c95a52f8a6676af4e1"
   integrity sha512-EADVFqx5x4te/teqwjHb025FIy/T0QXafcVDRwUijS6OOqm5rZ7fXd/hu41XYYn3B802r/g4bDC2wO+7foNVwA==
@@ -10154,13 +10147,16 @@ taro-plugin-pinia@^1.0.0:
   resolved "https://registry.yarnpkg.com/taro-plugin-pinia/-/taro-plugin-pinia-1.0.0.tgz#7dee620cc84303a4b4c2df50e649bae72c3b6ac0"
   integrity sha512-Ip2LTRh7NGsFyEzkZWvU115xDqV3D8cRRbqqw0JKTvzHFBzpwycmrUVQQxV61AMg0r2RJm3mcEbQ997j7xNjtg==
 
-taro-plugin-unocss@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/taro-plugin-unocss/-/taro-plugin-unocss-0.0.1.tgz#66dd06750a3bb065095bec8cd5ab5b8ec2b17431"
-  integrity sha512-zCReYfAhehzfuETJYKFlZcWrkqunTfCiVttnetFae8M8+7IN+IV561ITOXs3iX4th2C944iDmHQEAra6JOQr/A==
+taro-plugin-unocss@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/taro-plugin-unocss/-/taro-plugin-unocss-0.0.2.tgz#23defb8354fbd4e723ea266acedff06da1939115"
+  integrity sha512-QIfH2rBApQlqKUkjiwKD6c3Odmxh1N30DXzOsGdyXjWyww4acVOLZrQ7FdZbj64jyBlKDV/fLW2tONQW4ilozQ==
   dependencies:
     "@tarojs/service" "^3.4.12"
-    "@unocss/preset-rem-to-px" "^0.39.3"
+    "@unocss/core" "^0.39.3"
+    "@unocss/preset-attributify" "^0.39.3"
+    "@unocss/preset-typography" "^0.39.3"
+    "@unocss/preset-uno" "^0.39.3"
     "@unocss/webpack" "^0.39.3"
     unocss "^0.39.3"
 
