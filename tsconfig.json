@@ -13,14 +13,16 @@
     "noUnusedParameters": true,
     "strictNullChecks": true,
     "sourceMap": true,
-    "baseUrl": "./myApp",
+    "baseUrl": ".",
     "rootDir": ".",
     "jsx": "react-jsx",
     "allowJs": true,
     "resolveJsonModule": true,
     "typeRoots": [
       "node_modules/@types",
-      "global.d.ts"
+      "global.d.ts",
+      "src/components.d.ts",
+      "src/auto-imports.d.ts"
     ]
   },
   "exclude": [

@@ -1,6 +1,7 @@
 # taro-vue3-starter
 this is taro vue3 template
 
+vue3 + unocss + auto-import + vue-components
 
 ## usage
 
@@ -22,7 +23,6 @@ yarn
 ## serve
 
 ### weapp
-
 
 ```shell
 yarn dev:weapp

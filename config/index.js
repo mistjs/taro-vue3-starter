@@ -1,3 +1,5 @@
+import AutoImport from 'unplugin-auto-import/webpack'
+import Components from 'unplugin-vue-components/webpack'
 const config = {
   projectName: 'taro-unocss',
   date: '2022-5-15',
@@ -11,7 +13,16 @@ const config = {
   outputRoot: 'dist',
   plugins: [
     'taro-plugin-pinia',
-    'taro-plugin-unocss'
+    'taro-plugin-unocss',
+    [
+      '@tarojs/plugin-framework-vue3',
+      {
+        vueLoaderOption: {
+          // 添加 vue-macros 支持
+          reactivityTransform: true, // 开启vue3响应性语法糖
+        },
+      }
+    ],
   ],
   defineConstants: {
   },
@@ -24,6 +35,26 @@ const config = {
   framework: 'vue3',
   mini: {
     webpackChain (chain) {
+      // https://github.com/antfu/unplugin-auto-import
+      chain.plugin('unplugin-auto-import').use(AutoImport({
+        imports: [
+          'vue',
+          // https://vuejs.org/guide/extras/reactivity-transform.html#refs-vs-reactive-variables
+          'vue/macros'
+        ],
+        dts: 'src/auto-imports.d.ts',
+        dirs: [
+          'src/composables',
+          'src/stores',
+        ],
+        vueTemplate: true,
+      }))
+      // 添加组件按需引入, 自动引入 `src/components` 目录下的组件
+      // https://github.com/antfu/unplugin-vue-components
+      chain.plugin('unplugin-vue-components').use(Components({
+        dts: 'src/components.d.ts',
+        dirs: ['src/components', 'src/layouts'],
+      }))
       chain.merge({
         module: {
           rule: {
