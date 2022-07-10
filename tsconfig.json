@@ -18,6 +18,9 @@
     "jsx": "preserve",
     "allowJs": true,
     "resolveJsonModule": true,
+    "types": [
+      "@tarojs/taro/types"
+    ],
     "typeRoots": [
       "node_modules/@types",
       "global.d.ts",

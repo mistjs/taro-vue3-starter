@@ -5,5 +5,5 @@
 </template>
 
 <script lang="ts" setup>
-import "./index.less"
+import './index.less'
 </script>

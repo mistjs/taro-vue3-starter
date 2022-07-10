@@ -1,9 +1,14 @@
 <template>
   <view>
-    <text class="title">{{ counter.count }}</text>
+    <text class="title">
+      {{ counter.count }}
+    </text>
     <button
       class="rounded bg-teal-700 text-white text-center active-bg-teal-800"
-      @tap="onAdd">ADD</button>
+      @tap="onAdd"
+    >
+      ADD
+    </button>
   </view>
 </template>
 
