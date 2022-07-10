@@ -1,8 +1,8 @@
 <template>
-  <view>
-    <text class="title text-40">
+  <div>
+    <span class="title text-40">
       {{ counter.count }}
-    </text>
+    </span>
     <button
       class="rounded bg-teal-700 text-white text-center active-bg-teal-800"
       @tap="onAdd"
@@ -11,7 +11,7 @@
         增加
       </text>
     </button>
-  </view>
+  </div>
 </template>
 
 <script lang="ts" setup>

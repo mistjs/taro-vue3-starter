@@ -1498,6 +1498,11 @@
     "@tarojs/shared" "3.4.4"
     webpack "4.46.0"
 
+"@tarojs/plugin-html@^3.4.13":
+  version "3.4.13"
+  resolved "https://registry.npmmirror.com/@tarojs/plugin-html/-/plugin-html-3.4.13.tgz#d233bab01be22717db7300afc58bc3f1d18f7af5"
+  integrity sha512-D1yAtzIxyop3ghDR7KwtqrpgZ+mtW2jc5s/4Mqz+UwQQ1gXZWKwpPZMIh/b45q8KhtbXnGwNlArkZxpMQaKTqg==
+
 "@tarojs/plugin-platform-alipay@3.4.4":
   version "3.4.4"
   resolved "https://registry.yarnpkg.com/@tarojs/plugin-platform-alipay/-/plugin-platform-alipay-3.4.4.tgz#4800d3a61b848534c9c67683b2ddd96291dcee88"

@@ -12,6 +12,7 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: [
+    '@tarojs/plugin-html',
     'taro-plugin-pinia',
     ['taro-plugin-unocss', {
       preset: {
