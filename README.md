@@ -15,7 +15,7 @@ base on [taro.3.4.x](https://taro-docs.jd.com/taro/docs/)
 * vue3
 * unocss
 * auto-import
-* vue-components-unplugin
+* vue-components-unplugin (插件目前热更不生效，需要手动重启)
 * eslint-vue
 * 宏函数(taro3.4.x)
 
@@ -48,3 +48,34 @@ yarn
 yarn dev:weapp
 ```
 
+## unocss
+
+关于转换unocss：
+
+目前仅支持`class`内去编写unocss的样式，尽量不要使用attribute的方式去编写样式，经测试，小程序不能完全兼容。
+
+例如：
+
+### 不推荐用法
+
+```html
+
+<div m-10></div>
+
+<div flex="~ items-center"></div>
+
+```
+
+
+### 推荐写法
+
+```html
+
+<div class="m-10"></div>
+
+<div class="flex items-center"></div>
+
+```
+
+
+更多使用方式请查看[unocss官网](https://uno.antfu.me/)
