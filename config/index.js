@@ -24,10 +24,7 @@ const config = {
     [
       '@tarojs/plugin-framework-vue3',
       {
-        vueLoaderOption: {
-          // 添加 vue-macros 支持
-          reactivityTransform: true, // 开启vue3响应性语法糖
-        },
+        vueLoaderOption: {},
       },
     ],
   ],
