@@ -7,13 +7,19 @@ const config = {
   deviceRatio: {
     640: 2.34 / 2,
     750: 1,
-    828: 1.81 / 2
+    828: 1.81 / 2,
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: [
     'taro-plugin-pinia',
-    'taro-plugin-unocss',
+    ['taro-plugin-unocss', {
+      preset: {
+        remToRpx: {
+          baseFontSize: 4,
+        },
+      },
+    }],
     [
       '@tarojs/plugin-framework-vue3',
       {
@@ -21,7 +27,7 @@ const config = {
           // 添加 vue-macros 支持
           reactivityTransform: true, // 开启vue3响应性语法糖
         },
-      }
+      },
     ],
   ],
   defineConstants: {
@@ -30,17 +36,17 @@ const config = {
     patterns: [
     ],
     options: {
-    }
+    },
   },
   framework: 'vue3',
   mini: {
-    webpackChain (chain) {
+    webpackChain(chain) {
       // https://github.com/antfu/unplugin-auto-import
       chain.plugin('unplugin-auto-import').use(AutoImport({
         imports: [
           'vue',
           // https://vuejs.org/guide/extras/reactivity-transform.html#refs-vs-reactive-variables
-          'vue/macros'
+          'vue/macros',
         ],
         dts: 'src/auto-imports.d.ts',
         dirs: [
@@ -63,14 +69,14 @@ const config = {
               include: [/pinia/],
               use: {
                 babelLoader: {
-                  loader: require.resolve('babel-loader')
-                }
-              }
-            }
-          }
+                  loader: require.resolve('babel-loader'),
+                },
+              },
+            },
+          },
         },
-        plugins:[
-        ]
+        plugins: [
+        ],
       })
     },
     postcss: {
@@ -78,22 +84,22 @@ const config = {
         enable: true,
         config: {
 
-        }
+        },
       },
       url: {
         enable: true,
         config: {
-          limit: 1024 // 设定转换尺寸上限
-        }
+          limit: 1024, // 设定转换尺寸上限
+        },
       },
       cssModules: {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
         config: {
           namingPattern: 'module', // 转换模式，取值为 global/module
-          generateScopedName: '[name]__[local]___[hash:base64:5]'
-        }
-      }
-    }
+          generateScopedName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
+    },
   },
   h5: {
     publicPath: '/',
@@ -102,22 +108,22 @@ const config = {
       autoprefixer: {
         enable: true,
         config: {
-        }
+        },
       },
       cssModules: {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
         config: {
           namingPattern: 'module', // 转换模式，取值为 global/module
-          generateScopedName: '[name]__[local]___[hash:base64:5]'
-        }
-      }
-    }
-  }
+          generateScopedName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
+    },
+  },
 }
 
-module.exports = function (merge) {
-  if (process.env.NODE_ENV === 'development') {
+module.exports = function(merge) {
+  if (process.env.NODE_ENV === 'development')
     return merge({}, config, require('./dev'))
-  }
+
   return merge({}, config, require('./prod'))
 }

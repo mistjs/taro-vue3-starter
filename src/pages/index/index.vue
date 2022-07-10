@@ -1,5 +1,5 @@
 <template>
-  <view class="p-5 m-5">
+  <view class="p-10 m-10">
     <Counter />
   </view>
 </template>
