@@ -13,9 +13,9 @@ base on [taro.3.4.x](https://taro-docs.jd.com/taro/docs/)
 
 * html tag
 * vue3
-* unocss
-* auto-import
-* vue-components-unplugin (插件目前热更不生效，需要手动重启)
+* unocss (不太兼容H5平台)
+* auto-import（不支持H5平台）
+* vue-components-unplugin (插件目前热更不生效，需要手动重启，不支持H5平台)
 * eslint-vue
 * 宏函数(taro3.4.x)
 

@@ -61,7 +61,7 @@
     "eslint-config-taro": "3.4.4",
     "eslint-plugin-vue": "^8.0.0",
     "stylelint": "9.3.0",
-    "taro-plugin-unocss": "^0.0.2",
+    "taro-plugin-unocss": "file:/Users/zhuzhengjian/workspace/github/aibayanyu20/taro-plugin-unocss",
     "typescript": "^4.1.0",
     "unplugin-auto-import": "^0.8.7",
     "unplugin-vue-components": "^0.19.6",
