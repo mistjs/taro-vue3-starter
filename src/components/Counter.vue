@@ -9,28 +9,19 @@
   </view>
 </template>
 
-<script>
+<script lang="ts" setup>
 import { useCounterStore } from '../stores/counter'
 
-export default {
-  setup() {
-    const counter = useCounterStore()
+const counter = useCounterStore()
 
-    const onAdd = () => {
-      counter.count++
+const onAdd = () => {
+  counter.count++
 
-      // with autocompletion ✨
-      // counter.$patch({count: counter.count + 1})
+  // with autocompletion ✨
+  // counter.$patch({count: counter.count + 1})
 
-      // or using an action instead
-      // counter.increment()
-    }
-
-    return {
-      counter,
-      onAdd,
-    }
-  },
+  // or using an action instead
+  // counter.increment()
 }
 </script>
 

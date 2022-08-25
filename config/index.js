@@ -9,7 +9,16 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: ['taro-plugin-pinia', '@tarojs/plugin-html'],
+  plugins: [
+    'taro-plugin-pinia',
+    '@tarojs/plugin-html',
+    ['taro-plugin-unocss', {
+      preset: {
+        remToRpx: {
+          baseFontSize: 4,
+        },
+      },
+    }]],
   defineConstants: {
   },
   copy: {

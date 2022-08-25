@@ -2,9 +2,9 @@
   "name": "aa",
   "version": "1.0.0",
   "private": true,
-  "description": "taro project for 3.5.x",
+  "description": "taro project for 3.5.x use vue pinia and unocss",
   "templateInfo": {
-    "name": "vue3-pinia",
+    "name": "vue3-pinia-unocss",
     "typescript": true,
     "css": "less"
   },
@@ -74,5 +74,10 @@
     "typescript": "^4.1.0",
     "vue-loader": "^16.0.0-beta.8",
     "webpack": "5.69.0"
+  },
+  "pnpm":{
+    "peerDependencyRules":{
+      "ignoreMissing":["vite"]
+    }
   }
 }
