@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./",
-  "projectname": "myApp",
-  "description": "taro vue3 template",
+  "projectname": "aa",
+  "description": "taro project for 3.5.x",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,

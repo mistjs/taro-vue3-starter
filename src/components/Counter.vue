@@ -1,25 +1,27 @@
 <template>
-  <div>
-    <span class="title text-40">
+  <view>
+    <text class="title">
       {{ counter.count }}
-    </span>
-    <button
-      class="rounded bg-teal-700 text-white text-center active-bg-teal-800"
-      @tap="onAdd"
-    >
-      <text class="text-35">
-        增加
-      </text>
-    </button>
-  </div>
+    </text>
+    <view class="button" @tap="onAdd">
+      ADD
+    </view>
+  </view>
 </template>
 
 <script lang="ts" setup>
 import { useCounterStore } from '../stores/counter'
+
 const counter = useCounterStore()
 
 const onAdd = () => {
   counter.count++
+
+  // with autocompletion ✨
+  // counter.$patch({count: counter.count + 1})
+
+  // or using an action instead
+  // counter.increment()
 }
 </script>
 
@@ -27,5 +29,8 @@ const onAdd = () => {
 .title {
   font-size: 32px;
 }
-
+.button {
+  border: 1px solid lightgray;
+  padding: 5px 10px;
+}
 </style>

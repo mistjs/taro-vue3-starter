@@ -1,8 +1,8 @@
 import AutoImport from 'unplugin-auto-import/webpack'
 import Components from 'unplugin-vue-components/webpack'
 const config = {
-  projectName: 'taro-unocss',
-  date: '2022-5-15',
+  projectName: 'aa',
+  date: '2022-8-25',
   designWidth: 750,
   deviceRatio: {
     640: 2.34 / 2,
@@ -12,22 +12,15 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: [
-    '@tarojs/plugin-html',
     'taro-plugin-pinia',
+    '@tarojs/plugin-html',
     ['taro-plugin-unocss', {
       preset: {
         remToRpx: {
           baseFontSize: 4,
         },
       },
-    }],
-    [
-      '@tarojs/plugin-framework-vue3',
-      {
-        vueLoaderOption: {},
-      },
-    ],
-  ],
+    }]],
   defineConstants: {
   },
   copy: {
@@ -37,6 +30,10 @@ const config = {
     },
   },
   framework: 'vue3',
+  compiler: 'webpack5',
+  cache: {
+    enable: false, // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
+  },
   mini: {
     webpackChain(chain) {
       // https://github.com/antfu/unplugin-auto-import
@@ -46,7 +43,7 @@ const config = {
           // https://vuejs.org/guide/extras/reactivity-transform.html#refs-vs-reactive-variables
           'vue/macros',
         ],
-        dts: 'src/auto-imports.d.ts',
+        dts: 'types/auto-imports.d.ts',
         dirs: [
           'src/composables',
           'src/stores',
@@ -56,7 +53,7 @@ const config = {
       // 添加组件按需引入, 自动引入 `src/components` 目录下的组件
       // https://github.com/antfu/unplugin-vue-components
       chain.plugin('unplugin-vue-components').use(Components({
-        dts: 'src/components.d.ts',
+        dts: 'types/components.d.ts',
         dirs: ['src/components', 'src/layouts'],
       }))
       chain.merge({
@@ -64,7 +61,7 @@ const config = {
           rule: {
             mjsScript: {
               test: /\.mjs$/,
-              include: [/pinia/],
+              include: [/pinia/, /unplugin-vue-components/, /unplugin-auto-import/],
               use: {
                 babelLoader: {
                   loader: require.resolve('babel-loader'),
@@ -73,8 +70,6 @@ const config = {
             },
           },
         },
-        plugins: [
-        ],
       })
     },
     postcss: {

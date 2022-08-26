@@ -18,19 +18,10 @@
     "jsx": "preserve",
     "allowJs": true,
     "resolveJsonModule": true,
-    "types": [
-      "@tarojs/taro/types"
-    ],
     "typeRoots": [
-      "node_modules/@types",
-      "global.d.ts",
-      "src/components.d.ts",
-      "src/auto-imports.d.ts"
+      "node_modules/@types"
     ]
   },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
+  "include": ["./src", "./types"],
   "compileOnSave": false
 }
