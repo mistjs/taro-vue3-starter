@@ -14,6 +14,7 @@ const config = {
   plugins: [
     'taro-plugin-pinia',
     '@tarojs/plugin-html',
+    '@tarojs/plugin-http',
     ['taro-plugin-unocss', {
       preset: {
         remToRpx: {
