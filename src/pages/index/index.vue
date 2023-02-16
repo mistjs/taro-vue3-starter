@@ -1,5 +1,5 @@
 <template>
-  <view class="index p-80">
+  <view class="index p-40">
     <Counter />
   </view>
 </template>
