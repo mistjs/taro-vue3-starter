@@ -5,8 +5,7 @@ const commonChain = (chain) => {
   chain.plugin('unplugin-auto-import').use(AutoImport({
     imports: [
       'vue',
-      // https://vuejs.org/guide/extras/reactivity-transform.html#refs-vs-reactive-variables
-      'vue/macros',
+      'pinia',
     ],
     dts: 'types/auto-imports.d.ts',
     dirs: [
