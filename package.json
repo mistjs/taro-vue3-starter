@@ -2,7 +2,7 @@
   "name": "taro-for-unocss",
   "version": "1.0.0",
   "private": true,
-  "description": "taro project for 3.5.x use vue pinia and unocss",
+  "description": "taro project for 3.6.x use vue pinia and unocss",
   "templateInfo": {
     "name": "vue3-pinia-unocss",
     "typescript": true,
